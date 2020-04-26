@@ -65,15 +65,17 @@ function translation(q) {
                 // 语音
                 var msg = new SpeechSynthesisUtterance(result.trans_result[0].dst);
                 speechSynthesis.speak(msg);
+            }else{
+                if (result.error_msg){
+                    console.log(result.error_msg);
+                }
+                // chrome.notifications.create(null, {
+                //     type: 'basic',
+                //     iconUrl: 'icon/icon.png',
+                //     title: '翻译小助手',
+                //     message: result.error_msg
+                // });
             }
-        }else{
-            console.log(result.error_msg);
-            // chrome.notifications.create(null, {
-            //     type: 'basic',
-            //     iconUrl: 'icon/icon.png',
-            //     title: '翻译小助手',
-            //     message: result.error_msg
-            // });
         }
     }
 
