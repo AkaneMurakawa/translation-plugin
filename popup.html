@@ -24,10 +24,52 @@
             a:hover{
                 text-decoration: none;
             }
+            .title{
+                color: #5595ff;
+            }
+            .text-input{
+                width: 300px; 
+                min-height: 80px; 
+                border: 1px solid #5595ff;
+                padding: 5px 10px;
+                margin-bottom: 3px;
+                resize: inherit;
+            }
+            .translation-result{
+                
+                position: relative;
+                width: 300px; 
+                height: 80px; 
+                margin-bottom: 10px;
+            }
+            .translation-button{
+                display: block;
+                float: right;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                border: 1px solid #5595ff;
+                background-color: #5595ff;
+                border-radius: 10%;
+                color: #ffffff;
+            }
         </style>
     </head>
     <body>
-        <h3>翻译小助手 v1.0.0</h3>
-        <p>一个干净简洁、方便的chrome插件，你的翻译小助手，让你轻松阅读文章</p>
+        <div>
+            <h3 class="title">翻译小助手 v1.0.0</h3>
+            <p>一个干净简洁、方便的chrome插件，你的翻译小助手，让你轻松阅读文章</p>
+        </div>
+        <div>
+            <textarea type="text" id="text" placeholder="输入文字" class="text-input"></textarea>
+        </div>
+        <hr/>
+        <div class="translation-result">
+            <p id="result">
+            </p>
+            <button type="button" class="translation-button" id="translate">翻译</button>
+            <button type="button" class="translation-button" id="clear">清空</button>
+        </div>
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/popup.js"></script>
     </body>
 </html>

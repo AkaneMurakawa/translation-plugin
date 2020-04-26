@@ -32,8 +32,8 @@
       // "cookies", 
       // "webRequest", 
       // "webRequestBlocking", 
-      // "webNavigation", 
-      // "unlimitedStorage", 
+      "webNavigation", 
+      "unlimitedStorage", 
       "notifications", 
       "http://*/*", 
       "https://*/*",
@@ -56,9 +56,9 @@
       "matches": ["http://*/*", "https://*/*", "\u003Call_urls>"],
       // 注入时间
       "run_at": "document_end"
-   } ]
+   } ],
 
-   // "content_security_policy": "script-src 'self' https://cdn.bootcss.com https://fanyi-api.baidu.com https://www.layuicdn.com http://baidu.com/ ; object-src 'self'",
+   "content_security_policy": "script-src 'self' https://fanyi-api.baidu.com; object-src 'self'"
 
    // 普通页面能够直接访问的插件资源列表，如果不设置是无法直接访问的
    // "web_accessible_resources": ["lib/jquery.min.js"],
