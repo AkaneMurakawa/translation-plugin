@@ -1,0 +1,65 @@
+{
+   // manifest文件的版本，必须是2
+   "manifest_version": 2,
+   "name": "翻译小助手",
+   "description": "基于百度翻译API的翻译助手",
+   "version": "1.1.0",
+   "minimum_chrome_version": "18.0.0",
+   "icons": {
+		"16": "icons/icon.png",
+		"48": "icons/icon.png",
+		"128": "icons/icon.png"
+   },
+   "default_locale": "zh_CN",
+   "homepage_url": "https://github.com/AkaneMurakawa/translation-plugin",
+
+   // 浏览器右上角弹出窗口设置，popup
+   "browser_action": {
+         "default_icon": "icons/icon.png",
+         "default_popup": "popup.html",
+         "default_title": "翻译小助手"
+   },
+   
+   "options_page": "option.html",
+
+   // 权限
+   "permissions": [ 
+      "tabs", 
+      "contextMenus", 
+      "ttsEngine",
+      "windows",
+      "storage",
+      // "cookies", 
+      // "webRequest", 
+      // "webRequestBlocking", 
+      // "webNavigation", 
+      // "unlimitedStorage", 
+      "notifications", 
+      "http://*/*", 
+      "https://*/*",
+      "\u003Call_urls>"
+   ],
+
+   // 会一直在后台的JS或页面
+   "background": {
+      // "page": "index.html"
+      // The background.page and background.scripts properties cannot be used at the same time.
+      "scripts": ["background.js"]
+      // "persistent": false
+   },
+
+   // 注入页面的JS，content-scripts和原始页面共享DOM，但是不共享JS
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": ["background.js"],
+      "match_about_blank": true,
+      "matches": ["http://*/*", "https://*/*", "\u003Call_urls>"],
+      // 注入时间
+      "run_at": "document_end"
+   } ]
+
+   // "content_security_policy": "script-src 'self' https://cdn.bootcss.com https://fanyi-api.baidu.com https://www.layuicdn.com http://baidu.com/ ; object-src 'self'",
+
+   // 普通页面能够直接访问的插件资源列表，如果不设置是无法直接访问的
+   // "web_accessible_resources": ["lib/jquery.min.js"],
+}

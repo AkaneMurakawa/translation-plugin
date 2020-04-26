@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>翻译小助手</title>
+        <style type="text/css">
+            body{
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 15px;
+                line-height: 140%;
+                color: #000000;
+                background: #fcfcfc;
+                margin: 0;
+                padding: 10px 20px;
+            }
+            a:link{ 
+                text-decoration:none;
+            } 
+            a, a:link, a:visited{
+                color: #5a84b3;
+                text-decoration: underline;
+            }
+
+            a:hover{
+                text-decoration: none;
+            }
+            .content{
+                text-align: center;
+                padding-top: 10%;
+            }
+        </style>
+        <script src="lib/option.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <h2>翻译小助手 v1.0.0</h2>
+            <p>一个干净简洁、方便的chrome插件，你的翻译小助手，让你轻松阅读文章</p>
+            <select id="lang">
+                <option value="zh">中文</option>
+                <option value="en">英文</option>
+                <option value="ja">日语</option>
+            </select>
+            <input type="button" onclick="setLang()" value="设置">
+        </div>
+    </body>
+
+</html>
