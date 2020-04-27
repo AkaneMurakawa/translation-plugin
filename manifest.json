@@ -23,14 +23,7 @@
    "permissions": [ 
       "storage",
       "notifications", 
-      "tabs", 
       "contextMenus", 
-      "ttsEngine",
-      "windows",
-      // "cookies", 
-      // "webRequest", 
-      // "webRequestBlocking", 
-      "webNavigation", 
       "unlimitedStorage", 
       "http://*/*", 
       "https://*/*",
@@ -53,7 +46,4 @@
    } ],
 
    "content_security_policy": "script-src 'self' https://fanyi-api.baidu.com; object-src 'self'"
-
-   // 普通页面能够直接访问的插件资源列表，如果不设置是无法直接访问的
-   // "web_accessible_resources": ["lib/jquery.min.js"],
 }

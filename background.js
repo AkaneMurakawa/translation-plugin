@@ -1,19 +1,15 @@
-// 监听鼠标
+// add listener for mouseup
 document.addEventListener('mouseup', selectWords, true);
 
-// 获取选中的内容
+// get the select words
 function selectWords(event){
     var selection = window.getSelection();
-    var txt = selection.toString();
-    if (txt === '' || !txt){
+    var text = selection.toString();
+    if (text === '' || !text){
         return;
     }
 
-    // 发送信息到popup.js
-    // var storage = window.localStorage;
-    // storage.txt = txt;
-    // chrome.storage.sync.set({'txt': txt}, function(){
-    //     console.log('select content: ', txt)
-    //     // close();
-    // });
+    chrome.storage.sync.set({'text': text}, function(){
+        console.log('select content: ', text)
+    });
 }

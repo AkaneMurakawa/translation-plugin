@@ -7,14 +7,33 @@
     <body>
         <div class="content">
             <h2>翻译小助手 v1.0.0</h2>
-            <p>一个干净简洁、方便的chrome插件，你的翻译小助手，让你轻松阅读文章</p>
-            <select id="lang">
-                <option value="zh">中文</option>
-                <option value="en">英文</option>
-                <option value="jp">日语</option>
-                <option value="de">德语</option>
-            </select>
-            <input type="button" id="setLang" value="设置">
+                <p>一个干净简洁、方便的chrome插件，你的翻译小助手，让你轻松阅读文章</p>
+                <div>
+                    @author <a href="https://github.com/AkaneMurakawa">Akane Murakawa</a>
+                    @project <a href="https://github.com/AkaneMurakawa/translation-plugin">Github</a>
+                </div>
+            <div class="system-setting">
+                <div>
+                    <span>语言设置</span>
+                    <select id="lang">
+                        <option value="zh">中文</option>
+                        <option value="en">英文</option>
+                        <option value="jp">日语</option>
+                        <option value="de">德语</option>
+                    </select>
+                </div>
+                <br/>
+                <div>
+                    <span>开启语音</span>
+                    是
+                    <input type="radio" checked="checked" name="speech" value="Y" />
+                    否
+                    <input type="radio" name="speech" value="N" />
+                </div>
+                <div class="save">
+                    <input type="button" id="setting" value="保存">
+                </div>
+            </div>
         </div>
 
         <script src="lib/jquery.min.js"></script>
