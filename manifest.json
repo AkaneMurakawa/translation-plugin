@@ -1,8 +1,7 @@
 {
-   // manifest文件的版本，必须是2
    "manifest_version": 2,
    "name": "翻译小助手",
-   "description": "基于百度翻译API的翻译助手",
+   "description": "一个干净简洁、方便的chrome插件，你的翻译小助手，让你轻松阅读文章",
    "version": "1.1.0",
    "minimum_chrome_version": "18.0.0",
    "icons": {
@@ -13,7 +12,6 @@
    "default_locale": "zh_CN",
    "homepage_url": "https://github.com/AkaneMurakawa/translation-plugin",
 
-   // 浏览器右上角弹出窗口设置，popup
    "browser_action": {
          "default_icon": "icons/icon.png",
          "default_popup": "popup.html",
@@ -22,25 +20,23 @@
    
    "options_page": "option.html",
 
-   // 权限
    "permissions": [ 
+      "storage",
+      "notifications", 
       "tabs", 
       "contextMenus", 
       "ttsEngine",
       "windows",
-      "storage",
       // "cookies", 
       // "webRequest", 
       // "webRequestBlocking", 
       "webNavigation", 
       "unlimitedStorage", 
-      "notifications", 
       "http://*/*", 
       "https://*/*",
       "\u003Call_urls>"
    ],
 
-   // 会一直在后台的JS或页面
    "background": {
       // "page": "index.html"
       // The background.page and background.scripts properties cannot be used at the same time.
@@ -48,13 +44,11 @@
       // "persistent": false
    },
 
-   // 注入页面的JS，content-scripts和原始页面共享DOM，但是不共享JS
    "content_scripts": [ {
       "all_frames": false,
       "js": ["background.js"],
       "match_about_blank": true,
       "matches": ["http://*/*", "https://*/*", "\u003Call_urls>"],
-      // 注入时间
       "run_at": "document_end"
    } ],
 

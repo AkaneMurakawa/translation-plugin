@@ -1,0 +1,49 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 140%;
+    color: #000000;
+    width: 300px;
+    background: #fcfcfc;
+    margin: 0;
+    padding: 10px 20px;
+}
+a:link{ 
+    text-decoration:none;
+} 
+a, a:link, a:visited{
+    color: #5a84b3;
+    text-decoration: underline;
+}
+
+a:hover{
+    text-decoration: none;
+}
+.title{
+    color: #5595ff;
+}
+.text-input{
+    width: 300px; 
+    min-height: 80px; 
+    border: 1px solid #5595ff;
+    padding: 5px 10px;
+    margin-bottom: 3px;
+    resize: inherit;
+}
+.translation-result{
+    
+    position: relative;
+    width: 300px; 
+    height: 80px; 
+    margin-bottom: 10px;
+}
+.translation-button{
+    display: block;
+    float: right;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border: 1px solid #5595ff;
+    background-color: #5595ff;
+    border-radius: 10%;
+    color: #ffffff;
+}

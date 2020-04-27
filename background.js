@@ -1,7 +1,3 @@
-/**
- * 百度翻译文档: http://api.fanyi.baidu.com/doc/21
- */
-
 // 监听鼠标
 document.addEventListener('mouseup', selectWords, true);
 

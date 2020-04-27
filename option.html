@@ -2,33 +2,7 @@
     <head>
         <meta charset="UTF-8"/>
         <title>翻译小助手</title>
-        <style type="text/css">
-            body{
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 15px;
-                line-height: 140%;
-                color: #000000;
-                background: #fcfcfc;
-                margin: 0;
-                padding: 10px 20px;
-            }
-            a:link{ 
-                text-decoration:none;
-            } 
-            a, a:link, a:visited{
-                color: #5a84b3;
-                text-decoration: underline;
-            }
-
-            a:hover{
-                text-decoration: none;
-            }
-            .content{
-                text-align: center;
-                padding-top: 10%;
-            }
-        </style>
-        <script src="lib/option.js"></script>
+        <link rel="stylesheet" type="text/css" href="/lib/option.css">
     </head>
     <body>
         <div class="content">
@@ -39,8 +13,10 @@
                 <option value="en">英文</option>
                 <option value="ja">日语</option>
             </select>
-            <input type="button" onclick="setLang()" value="设置">
+            <input type="button" id="setLang" value="设置">
         </div>
-    </body>
 
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/option.js"></script>
+    </body>
 </html>

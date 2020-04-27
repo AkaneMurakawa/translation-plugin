@@ -7,9 +7,3 @@
 ## 安装
 chrome浏览器 ——> 更多工具(L) ——> 扩展程序(E) ——> 加载已解压的扩展程序
 
-
-## TODO
-fixbug
-```
-because it violates the following Content Security Policy directive: "script-src 'self' blob: filesystem: chrome-extension-resource:". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
-```
