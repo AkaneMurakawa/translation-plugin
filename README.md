@@ -24,3 +24,21 @@ chrome浏览器 ——> 更多工具(L) ——> 扩展程序(E) ——> 加载�
 
 ![demo2](img/2.png)
 
+## 其他
+
+本插件是基于百度通用翻译API的，使用的是标准版，限制是QPS(每秒访问量) = 1
+
+你可以去[注册开通](http://api.fanyi.baidu.com/product/11)百度通用翻译，然后在[lib/popup.js](lib/popup.js)下修改 appid 和 key
+
+查看appid 和 key: http://api.fanyi.baidu.com/api/trans/product/desktop
+
+
+搜索关键字: appid 找到相应的内容修改appid 和 key
+```
+    // 自定义appid 和 key(密钥)
+    var appid = '20200418000423327';
+    var salt = (new Date).getTime();
+    var key = 'w86l2KSP7GJbtB0rokYv';
+```
+
+
