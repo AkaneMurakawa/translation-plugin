@@ -1,4 +1,4 @@
-body{
+body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 140%;
@@ -8,35 +8,44 @@ body{
     padding: 10px 20px;
     background-image: url("/lib/background.png");
 }
-a:link{ 
-    text-decoration:none;
-} 
-a, a:link, a:visited{
+
+a:link {
+    text-decoration: none;
+}
+
+a,
+a:link,
+a:visited {
     color: #5a84b3;
     text-decoration: underline;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
 }
-.content{
+
+.content {
     text-align: center;
     padding: 10% 50% 0 10%;
 }
-.system-setting{
+
+.system-setting {
     text-align: left;
     padding: 30px 100px;
-    box-shadow: 8px 8px 14px 20px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    box-shadow: 8px 8px 14px 20px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
     border-radius: 5px;
     color: #222;
 }
-.system-setting span{
+
+.system-setting span {
     margin-right: 30px;
 }
-.save{
+
+.save {
     margin-top: 50px;
     text-align: center;
 }
-#setting{
+
+#setting {
     border-radius: 5px;
 }

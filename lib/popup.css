@@ -1,4 +1,4 @@
-body{
+body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 140%;
@@ -8,36 +8,44 @@ body{
     margin: 0;
     padding: 10px 20px;
 }
-a:link{ 
-    text-decoration:none;
-} 
-a, a:link, a:visited{
+
+a:link {
+    text-decoration: none;
+}
+
+a,
+a:link,
+a:visited {
     color: #5a84b3;
     text-decoration: underline;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
 }
-.title{
+
+.title {
     color: #5595ff;
 }
-.text-input{
-    width: 300px; 
-    min-height: 80px; 
+
+.text-input {
+    width: 300px;
+    min-height: 80px;
     border: 1px solid #5595ff;
     padding: 5px 10px;
     margin-bottom: 3px;
     resize: inherit;
 }
-.translation-result{
-    
+
+.translation-result {
+
     position: relative;
-    width: 300px; 
-    height: 80px; 
+    width: 300px;
+    height: 80px;
     margin-bottom: 10px;
 }
-.translation-button{
+
+.translation-button {
     display: block;
     float: right;
     margin-bottom: 10px;

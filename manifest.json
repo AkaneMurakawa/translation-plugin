@@ -5,45 +5,46 @@
    "version": "1.1.0",
    "minimum_chrome_version": "18.0.0",
    "icons": {
-		"16": "icons/icon.png",
-		"48": "icons/icon.png",
-		"128": "icons/icon.png"
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
    },
    "default_locale": "zh_CN",
    "homepage_url": "https://github.com/AkaneMurakawa/translation-plugin",
-
    "browser_action": {
-         "default_icon": "icons/icon.png",
-         "default_popup": "popup.html",
-         "default_title": "翻译小助手"
+      "default_icon": "icons/icon.png",
+      "default_popup": "popup.html",
+      "default_title": "翻译小助手"
    },
-   
    "options_page": "option.html",
-
-   "permissions": [ 
+   "permissions": [
       "storage",
-      "notifications", 
-      "contextMenus", 
-      "unlimitedStorage", 
-      "http://*/*", 
+      "notifications",
+      "contextMenus",
+      "unlimitedStorage",
+      "http://*/*",
       "https://*/*",
       "\u003Call_urls>"
    ],
-
    "background": {
-      // "page": "index.html"
-      // The background.page and background.scripts properties cannot be used at the same time.
-      "scripts": ["background.js"]
-      // "persistent": false
+      "scripts": [
+         "background.js"
+      ]
    },
-
-   "content_scripts": [ {
-      "all_frames": false,
-      "js": ["background.js"],
-      "match_about_blank": true,
-      "matches": ["http://*/*", "https://*/*", "\u003Call_urls>"],
-      "run_at": "document_end"
-   } ],
-
+   "content_scripts": [
+      {
+         "all_frames": false,
+         "js": [
+            "background.js"
+         ],
+         "match_about_blank": true,
+         "matches": [
+            "http://*/*",
+            "https://*/*",
+            "\u003Call_urls>"
+         ],
+         "run_at": "document_end"
+      }
+   ],
    "content_security_policy": "script-src 'self' https://fanyi-api.baidu.com; object-src 'self'"
 }
